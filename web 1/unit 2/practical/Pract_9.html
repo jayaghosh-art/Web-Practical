@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <title>Mobile-First Responsive Page</title>
+    <style>
+        /* --- 1. MOBILE-FIRST BASE STYLES --- */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            /* Flexible unit: font scales slightly with device size */
+            font-size: 1rem; 
+            color: #333;
+        }
+
+        header {
+            background: #2c3e50;
+            color: white;
+            padding: 2rem;
+            text-align: center;
+        }
+
+        .container {
+            /* Flexible unit: takes up 90% of screen on mobile */
+            width: 90%;
+            margin: 2rem auto;
+        }
+
+        .card-wrapper {
+            display: flex;
+            flex-direction: column; /* Stacked vertically on mobile */
+            gap: 1.5rem;
+        }
+
+        .card {
+            background: #ecf0f1;
+            padding: 1.5rem;
+            border-radius: 8px;
+            border-left: 5px solid #3498db;
+        }
+
+        /* --- 2. TABLET BREAKPOINT (min-width: 600px) --- */
+        @media (min-width: 600px) {
+            .container {
+                width: 80%; /* Narrower container for better readability */
+            }
+            .card-wrapper {
+                flex-direction: row; /* Side-by-side on larger screens */
+                flex-wrap: wrap;
+            }
+            .card {
+                flex: 1; /* Cards grow to fill equal space */
+            }
+        }
+
+        /* --- 3. DESKTOP BREAKPOINT (min-width: 1024px) --- */
+        @media (min-width: 1024px) {
+            body {
+                font-size: 1.1rem; /* Slightly larger text for big monitors */
+            }
+            header {
+                padding: 4rem; /* More "breathing room" */
+            }
+            .container {
+                max-width: 1100px; /* Caps the width so it doesn't get too wide */
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Responsive Design</h1>
+        <p>Resize your browser to see the magic!</p>
+    </header>
+
+    <main class="container">
+        <div class="card-wrapper">
+            <article class="card">
+                <h2>Flexible Units</h2>
+                <p>We use <strong>rem</strong> for spacing and <strong>%</strong> for widths to ensure elements scale relative to their parent or root.</p>
+            </article>
+
+            <article class="card">
+                <h2>Media Queries</h2>
+                <p>Using <code>min-width</code> allows us to stack content on mobile and expand into columns on desktop.</p>
+            </article>
+        </div>
+    </main>
+
+</body>
+</html>

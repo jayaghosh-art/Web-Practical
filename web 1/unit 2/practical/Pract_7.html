@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Master HTML & CSS Portfolio</title>
+    
+    <style>
+        /* 1. Global Styles & Box Model Reset */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            background-color: #f0f2f5;
+            color: #333;
+        }
+
+        /* 2. Semantic Layout Styling */
+        header {
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), 
+                        url('https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=1200');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 60px 20px;
+            text-align: center;
+        }
+
+        nav {
+            background: #333;
+            padding: 15px;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+        }
+
+        .container {
+            display: flex;
+            max-width: 1100px;
+            margin: 20px auto;
+            gap: 20px;
+            padding: 0 20px;
+        }
+
+        main { flex: 3; }
+        aside { flex: 1; background: white; padding: 20px; border-radius: 8px; height: fit-content; }
+
+        /* 3. Component Styles */
+        section {
+            background: white;
+            padding: 30px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+
+        th, td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: left;
+        }
+
+        /* 4. Form Styling */
+        input, select, textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        button {
+            background: #28a745;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: #333;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Full-Stack HTML & CSS Guide</h1>
+        <p>Combining structure, style, and semantics.</p>
+    </header>
+
+    <nav>
+        <a href="#content">Content</a>
+        <a href="#data">Data</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <div class="container">
+        <main id="content">
+            <section>
+                <h2>Project Milestones</h2>
+                <ul>
+                    <li><strong>Phase 1:</strong> Structure (HTML)
+                        <ol>
+                            <li>Semantic tags</li>
+                            <li>Form elements</li>
+                        </ol>
+                    </li>
+                    <li><strong>Phase 2:</strong> Style (CSS)</li>
+                </ul>
+            </section>
+
+            <section id="data">
+                <h2>Project Timeline</h2>
+                <table>
+                    <caption>Estimated Completion</caption>
+                    <thead>
+                        <tr>
+                            <th>Task</th>
+                            <th>Duration</th>
+                            <th>Priority</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>HTML Wireframe</td>
+                            <td>2 Days</td>
+                            <td rowspan="2">High</td>
+                        </tr>
+                        <tr>
+                            <td>CSS Styling</td>
+                            <td>3 Days</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+        </main>
+
+        <aside id="contact">
+            <h3>Get in Touch</h3>
+            <form>
+                <label for="name">Name</label>
+                <input type="text" id="name" placeholder="Your name...">
+                
+                <label>Experience Level</label><br>
+                <input type="radio" name="lvl" id="beg"> <label for="beg" style="display:inline">Beginner</label><br>
+                <input type="radio" name="lvl" id="adv"> <label for="adv" style="display:inline">Advanced</label>
+                
+                <button type="submit">Send Message</button>
+            </form>
+        </aside>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Web Dev Learning. Built with Semantic HTML.</p>
+    </footer>
+
+</body>
+</html>

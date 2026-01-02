@@ -1,0 +1,13 @@
+/* style.css */
+header {
+    background-color: #333;
+    color: white;
+    padding: 20px;
+}
+
+.main-button {
+    background-color: #007bff;
+    color: white;
+    border-radius: 5px;
+    padding: 10px 20px;
+}

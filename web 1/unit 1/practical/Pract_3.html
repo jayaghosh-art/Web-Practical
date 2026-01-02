@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <title>HTML Table Layout</title>
+    <style>
+        /* Adding basic styling so the table structure is visible */
+        table {
+            width: 80%;
+            border-collapse: collapse;
+            margin: 20px auto;
+            font-family: Arial, sans-serif;
+        }
+        th, td {
+            border: 1px solid #333;
+            padding: 12px;
+            text-align: center; /* Horizontal alignment */
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        caption {
+            font-size: 1.5em;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <table>
+        <caption>Employee Weekly Shift Schedule</caption>
+        
+        <thead>
+            <tr>
+                <th>Time Slot</th>
+                <th>Monday</th>
+                <th>Tuesday</th>
+                <th>Wednesday</th>
+            </tr>
+        </thead>
+        
+        <tbody>
+            <tr>
+                <td>09:00 AM - 11:00 AM</td>
+                <td>Project Alpha</td>
+                <td>Project Beta</td>
+                <td>Project Alpha</td>
+            </tr>
+            <tr>
+                <td>11:00 AM - 01:00 PM</td>
+                <td colspan="2" style="background-color: #e8f4fd;">Collaborative Team Meeting</td>
+                <td>Documentation</td>
+            </tr>
+            <tr>
+                <td>01:00 PM - 02:00 PM</td>
+                <td colspan="3"><strong>LUNCH BREAK</strong></td>
+            </tr>
+            <tr>
+                <td rowspan="2" style="vertical-align: middle;">02:00 PM - 04:00 PM</td>
+                <td>Client Call</td>
+                <td>Research</td>
+                <td rowspan="2" style="vertical-align: middle;">Workshop</td>
+            </tr>
+            <tr>
+                <td>Admin Work</td>
+                <td>Code Review</td>
+            </tr>
+        </tbody>
+        
+        <tfoot>
+            <tr>
+                <td colspan="4" style="text-align: right;"><em>Last updated: Dec 2025</em></td>
+            </tr>
+        </tfoot>
+    </table>
+
+</body>
+</html>

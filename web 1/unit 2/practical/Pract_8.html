@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>CSS Selector Demo</title>
+    <style>
+        /* 1. UNIVERSAL SELECTOR: Resets padding/margin for everything */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: sans-serif;
+        }
+
+        /* 2. GROUPING SELECTOR: Styles headings and paragraphs together */
+        h1, p {
+            text-align: center;
+            margin-bottom: 15px;
+        }
+
+        /* 3. ID SELECTOR: Targets the unique header container */
+        #main-container {
+            background-color: #f4f4f4;
+            padding: 40px;
+            border: 2px solid #333;
+        }
+
+        /* 4. CLASS SELECTOR: Styles any element with 'highlight' */
+        .highlight {
+            color: #e67e22;
+            font-weight: bold;
+        }
+
+        /* 5. DESCENDANT SELECTOR: Styles <li> only if inside a <ul> */
+        /* It ignores <li> tags inside <ol> if they existed */
+        ul li {
+            color: #2980b9;
+            list-style-position: inside;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="main-container">
+        <h1>Understanding CSS Selectors</h1>
+        
+        <p>This paragraph is styled by a <span class="highlight">Class Selector</span>.</p>
+        
+        <p>Below is a list targeted by a Descendant Selector:</p>
+        
+        <ul>
+            <li>First list item</li>
+            <li>Second list item</li>
+            <li>Third list item</li>
+        </ul>
+    </div>
+
+</body>
+</html>
